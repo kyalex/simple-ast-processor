@@ -1,0 +1,79 @@
+require:
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/FormatStringToken:
+  EnforcedStyle: template
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/FetchEnvVar:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  AllowedPatterns:
+    - \A#
+
+Metrics/AbcSize:
+  Max: 21
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Lint/EmptyBlock:
+  Exclude:
+    - spec/factories/**/*
+RSpec:
+  Language:
+    Helpers:
+      - path
+    ExampleGroups:
+      Regular:
+        - path
+
+RSpec/IndexedLet:
+  Max: 3
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/ScatteredLet:
+  Enabled: true
